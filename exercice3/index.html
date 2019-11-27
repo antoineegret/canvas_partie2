@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="800">
+        Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour
+    </canvas>
+    <div id="zombie">
+        <img src="zombie.svg" alt="">
+    </div>
+    <script>
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        ctx.lineJoin = "round"; //pour faire le bout du trait arrondir
+        ctx.lineCap = "round"; //pour faire le bout du trait arrondir
+        ctx.strokeStyle = "#976f0f";
+        ctx.beginPath();
+        ctx.moveTo(50, 110);
+        ctx.lineTo(300, 110);
+        ctx.lineWidth = 35;
+        ctx.stroke();
+        ctx.closePath();
+
+//tête
+
+        ctx.lineWidth = 3;
+        ctx.fillStyle = "#976f0f";
+        ctx.beginPath();
+        ctx.arc(170, 60, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        //jambe gauche
+
+        ctx.lineJoin = "round"; //pour faire le bout du trait arrondir
+        ctx.lineCap = "round"; //pour faire le bout du trait arrondir
+        ctx.strokeStyle = "#976f0f";
+        ctx.beginPath();
+        ctx.moveTo(140, 120);
+        ctx.lineTo(140, 300);
+        ctx.lineWidth = 35;
+        ctx.stroke();
+        ctx.closePath();
+
+        //jambe droite
+
+        ctx.lineJoin = "round"; //pour faire le bout du trait arrondir
+        ctx.lineCap = "round"; //pour faire le bout du trait arrondir
+        ctx.strokeStyle = "#976f0f";
+        ctx.beginPath();
+        ctx.moveTo(200, 120);
+        ctx.lineTo(200, 300);
+        ctx.lineWidth = 35;
+        ctx.stroke();
+        ctx.closePath();
+        ////
+        ctx.lineJoin = "round"; //pour faire le bout du trait arrondir
+        ctx.lineCap = "round"; //pour faire le bout du trait arrondir
+        ctx.strokeStyle = "#976f0f";
+        ctx.beginPath();
+        ctx.moveTo(170, 120);
+        ctx.lineTo(170, 250);
+        ctx.lineWidth = 35;
+        ctx.stroke();
+        ctx.closePath();
+
+        //entrejambe partie blanche
+
+        ctx.lineJoin = "round"; //pour faire le bout du trait arrondir
+        ctx.lineCap = "round"; //pour faire le bout du trait arrondir
+        ctx.strokeStyle = "white";
+        ctx.beginPath();
+        ctx.moveTo(170, 260);
+        ctx.lineTo(170, 300);
+        ctx.lineWidth = 26;
+        ctx.stroke();
+        ctx.closePath();
+
+        //bouton 
+
+        ctx.lineWidth = 3;
+        ctx.fillStyle = "pink";
+        ctx.beginPath();
+        ctx.arc(170, 140, 10, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.lineWidth = 3;
+        ctx.fillStyle = "pink";
+        ctx.beginPath();
+        ctx.arc(170, 180, 10, 0, 2 * Math.PI);
+        ctx.fill();
+
+        //oeil gauche 
+
+        ctx.lineWidth = 3;
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.arc(150, 50, 10, 0, 2 * Math.PI);
+        ctx.fill();
+
+        //oeil droit
+
+        ctx.lineWidth = 3;
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.arc(190, 50, 10, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.strokeStyle = "white";
+        ctx.beginPath(); // L'œil gauche
+        ctx.arc(150, 50, 20, (Math.PI / 150) * 190, (Math.PI / 180) * 290);
+        ctx.stroke();
+
+        ctx.strokeStyle = "white";
+        ctx.beginPath(); // L'œil gauche
+        ctx.arc(190, 50, 20, (Math.PI / 150) * 210, (Math.PI / 180) * 320);
+        ctx.stroke();
+
+        ctx.strokeStyle = "red";
+        ctx.beginPath();
+        ctx.moveTo(140, 80);
+        ctx.bezierCurveTo(160, 100, 180, 100, 200, 80);
+        ctx.stroke();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="2000" height="500">
+
+    </canvas>
+    <script>
+      var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+ctx.lineJoin = "round";
+ctx.lineCap = "round";
+
+// lettre E
+
+ctx.beginPath();
+ ctx.moveTo(50,100);
+ ctx.lineTo(50,300);
+ ctx.lineWidth = 3;
+ ctx.stroke();
+ ctx.closePath(); 
+
+ ctx.beginPath();
+ ctx.moveTo(50,100);
+ ctx.lineTo(120,100);
+ ctx.lineWidth = 3;
+ ctx.stroke();
+ ctx.closePath(); 
+
+
+ ctx.beginPath();
+ ctx.moveTo(50,200);
+ ctx.lineTo(120,200);
+ ctx.lineWidth = 3;
+ ctx.stroke();
+ ctx.closePath(); 
+
+ ctx.beginPath();
+ ctx.moveTo(50,300);
+ ctx.lineTo(120,300);
+ ctx.lineWidth = 3;
+ ctx.stroke();
+ ctx.closePath();
+
+ //fin lettr E
+//lettre N
+
+ ctx.beginPath();
+ ctx.moveTo(340,100);
+ ctx.lineTo(340,300);
+ ctx.lineWidth = 3;
+ ctx.stroke();
+ ctx.closePath();
+
+ ctx.beginPath();
+ ctx.moveTo(500,100);
+ ctx.lineTo(500,300);
+ ctx.lineWidth = 3;
+ ctx.stroke();
+ ctx.closePath();
+
+ ctx.beginPath();
+ ctx.moveTo(340,100);
+ ctx.lineTo(500,300);
+ ctx.lineWidth = 3;
+ ctx.stroke();
+ ctx.closePath();
+
+//fin lettre N
+
+  ctx.beginPath();
+  ctx.strokeStyle='red';
+  ctx.lineWidth=4;
+  ctx.moveTo(20,100);
+  ctx.quadraticCurveTo(200,10, 300, 100);
+  ctx.stroke();
+
+    </script>
+</body>
+</html>
